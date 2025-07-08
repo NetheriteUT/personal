@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUT - Developer Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="bubbles"></div>
+    
+    <div class="container">
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <span class="btn close"></span>
+                <span class="btn minimize"></span>
+                <span class="btn maximize"></span>
+            </div>
+            <div class="terminal-title">NUT@portfolio:~$</div>
+        </div>
+        
+        <div class="content">
+            <div class="hero-section">
+                <div class="cursor-line">
+                    <span class="prompt">root@dev:~$</span>
+                    <span class="command">cat about.md</span>
+                </div>
+                
+                <div class="markdown-content">
+                    <h1># NUT</h1>
+                    <p class="subtitle">Developer • Entrepreneur • Creator</p>
+                    
+                    <div class="experience-block">
+                        <h2>## Experience</h2>
+                        <ul>
+                            <li>🇨🇳 🇺🇸 International background</li>
+                            <li>💻 6 Years of Code in JS, Python, HTML, CSS</li>
+                            <li>🕳️ Website Design Entrepreneur!</li>
+                            <li>🤞 Wish me luck on Full-stack development</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="scroll-indicator">
+                <div class="arrow-down"></div>
+                <span>scroll down</span>
+            </div>
+            
+            <div class="projects-section">
+                <div class="cursor-line">
+                    <span class="prompt">root@dev:~$</span>
+                    <span class="command">ls projects/</span>
+                </div>
+                
+                <div class="markdown-content">
+                    <h2>## Projects</h2>
+                    
+                    <div class="project-grid">
+                        <div class="project-card">
+                            <h3>### Discord Bot</h3>
+                            <p>Custom Discord bot with advanced features and automation</p>
+                            <div class="tech-stack">
+                                <span class="tech">Python</span>
+                                <span class="tech">Discord.py</span>
+                            </div>
+                        </div>
+                        
+                        <div class="project-card">
+                            <h3>### Discord Server</h3>
+                            <p>Active community server with custom bots and moderation</p>
+                            <div class="tech-stack">
+                                <span class="tech">Community</span>
+                                <span class="tech">Moderation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="blog-section">
+                <div class="cursor-line">
+                    <span class="prompt">root@dev:~$</span>
+                    <span class="command">cat blog.md</span>
+                </div>
+                
+                <div class="markdown-content">
+                    <h2>## Blog</h2>
+                    
+                    <div class="blog-grid">
+                        <div class="blog-post">
+                            <div class="blog-date">2025-07-08</div>
+                            <h4>Start of my Website</h4>
+                            <p>I've always seen people all around me create projects I really thought were mind blowing. Creating a full blown iphone or car would've tooken me a long long time. I'm currently an incoming freshman in high school and I hope to enjoy my life throughout the years.</p>
+                            <div class="blog-tags">
+                                <span class="blog-tag">Personal</span>
+                                <span class="blog-tag">Journey</span>
+                                <span class="blog-tag">Beginning</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="stocks-section">
+                <div class="cursor-line">
+                    <span class="prompt">root@dev:~$</span>
+                    <span class="command">watch -n 10 "curl -s 'https://finnhub.io/api/v1/stock/symbol?exchange=US&token=d1mjse9r01qlvnp2t68gd1mjse9r01qlvnp2t690' | head -10"</span>
+                </div>
+                
+                <div class="markdown-content">
+                    <h2>## Live Stock Ticker</h2>
+                    <div class="stock-ticker">
+                        <div class="loading">Loading stock data...</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="socials-section">
+                <div class="cursor-line">
+                    <span class="prompt">root@dev:~$</span>
+                    <span class="command">cat socials.md</span>
+                </div>
+                
+                <div class="markdown-content">
+                    <h2>## Connect</h2>
+                    
+                    <div class="social-links">
+                        <a href="https://www.youtube.com/channel/UCe2m0_LliKAjLYGG0boQZvw" target="_blank" class="social-link">
+                            <i class="fab fa-youtube icon"></i>
+                            <span>YouTube</span>
+                        </a>
+                        
+                        <a href="https://open.spotify.com/user/31e5yafyhv3hcsffqgrgajh2hv7e" target="_blank" class="social-link">
+                            <i class="fab fa-spotify icon"></i>
+                            <span>Spotify</span>
+                        </a>
+                        
+                        <a href="https://www.reddit.com/user/NetheriteUT/" target="_blank" class="social-link">
+                            <i class="fab fa-reddit icon"></i>
+                            <span>Reddit</span>
+                        </a>
+                        
+                        <a href="https://discord.gg/S9Vxgkbxf8" target="_blank" class="social-link">
+                            <i class="fab fa-discord icon"></i>
+                            <span>Discord Server</span>
+                        </a>
+                        
+                        <div class="social-link">
+                            <i class="fab fa-discord icon"></i>
+                            <span>Discord: NetheriteUT</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
