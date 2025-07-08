@@ -1,4 +1,4 @@
-
+// Create floating bubbles
 function createBubbles() {
     const bubblesContainer = document.querySelector('.bubbles');
     const bubbleCount = 20;
@@ -7,23 +7,23 @@ function createBubbles() {
         const bubble = document.createElement('div');
         bubble.classList.add('bubble');
         
-        
+        // Random size
         const size = Math.random() * 40 + 20;
         bubble.style.width = `${size}px`;
         bubble.style.height = `${size}px`;
         
-        
+        // Random position
         bubble.style.left = `${Math.random() * 100}%`;
         bubble.style.top = `${Math.random() * 100}%`;
         
-        
+        // Random animation delay
         bubble.style.animationDelay = `${Math.random() * 8}s`;
         
         bubblesContainer.appendChild(bubble);
     }
 }
 
-
+// Typing effect for terminal commands
 function typeCommand(element, text, speed = 50) {
     element.textContent = '';
     let i = 0;
@@ -38,7 +38,7 @@ function typeCommand(element, text, speed = 50) {
     }, speed);
 }
 
-
+// Smooth scrolling for scroll indicator
 function setupScrollIndicator() {
     const scrollIndicator = document.querySelector('.scroll-indicator');
     
@@ -49,7 +49,7 @@ function setupScrollIndicator() {
     });
 }
 
-
+// Matrix rain effect (subtle)
 function createMatrixRain() {
     const canvas = document.createElement('canvas');
     canvas.style.position = 'fixed';
@@ -98,7 +98,7 @@ function createMatrixRain() {
     setInterval(draw, 100);
 }
 
-
+// Glitch effect for title
 function addGlitchEffect() {
     const title = document.querySelector('h1');
     
@@ -112,7 +112,7 @@ function addGlitchEffect() {
     }, 1000);
 }
 
-
+// Stock ticker functionality
 const FINNHUB_API_KEY = 'd1mjse9r01qlvnp2t68gd1mjse9r01qlvnp2t690';
 const POPULAR_STOCKS = ['AAPL', 'MSFT', 'GOOGL', 'AMZN', 'TSLA', 'META', 'NVDA', 'NFLX', 'ADBE', 'CRM'];
 
@@ -121,11 +121,11 @@ async function fetchStockData() {
     
     try {
         const stockPromises = POPULAR_STOCKS.map(async (symbol) => {
-            const response = await fetch(`https:
+            const response = await fetch(`https://finnhub.io/api/v1/quote?symbol=${symbol}&token=${FINNHUB_API_KEY}`);
             const data = await response.json();
             
-            
-            const profileResponse = await fetch(`https:
+            // Get company profile for description
+            const profileResponse = await fetch(`https://finnhub.io/api/v1/stock/profile2?symbol=${symbol}&token=${FINNHUB_API_KEY}`);
             const profileData = await profileResponse.json();
             
             return {
@@ -178,18 +178,18 @@ function displayStocks(stocks) {
     stockTicker.innerHTML = html;
 }
 
-
+// Initialize stock ticker
 function initializeStockTicker() {
     fetchStockData();
-    setInterval(fetchStockData, 10000); 
+    setInterval(fetchStockData, 10000); // Update every 10 seconds
 }
 
-
+// Initialize everything
 document.addEventListener('DOMContentLoaded', () => {
     setupScrollIndicator();
     initializeStockTicker();
     
-    
+    // Type commands with delays
     setTimeout(() => {
         const commands = document.querySelectorAll('.command');
         commands.forEach((cmd, index) => {
@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 500);
 });
 
-
+// Parallax effect for bubbles
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const bubbles = document.querySelectorAll('.bubble');
